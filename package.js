@@ -1,24 +1,18 @@
 Package.describe({
-  name: 'meteor-persist-user',
-  version: '0.0.1',
-  // Brief, one-line summary of the package.
-  summary: '',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  name: 'stumps:persist-user',
+  version: '1.0.0',
+  summary: 'Persist the logged-in user for offline use.',
+  git: 'https://github.com/stumpss/meteor-persist-user',
   documentation: 'README.md'
-});
+})
 
-Package.onUse(function(api) {
-  api.versionsFrom('1.6.0.1');
-  api.use('ecmascript');
-  api.mainModule('meteor-persist-user.js');
-});
+Package.onUse(function (api) {
 
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('meteor-persist-user');
-  api.mainModule('meteor-persist-user-tests.js');
-});
+  api.use([
+    'accounts-base@1.0.0',
+    'reactive-var@1.0.1',
+    'stumps:persist-collection@1.1.0'
+  ])
+
+  api.addFiles('persist-user.js', 'client')
+})
