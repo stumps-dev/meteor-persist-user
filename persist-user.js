@@ -8,7 +8,8 @@ if (userId) {
 
   Accounts.users.getPersisted(userId).then(user => {
 
-    user._id = userId
+    if (user)
+      user._id = userId
 
     persistedUser.set(user)
   })

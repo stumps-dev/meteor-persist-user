@@ -1,6 +1,6 @@
 Package.describe({
   name: 'stumps:persist-user',
-  version: '1.0.0',
+  version: '1.0.1',
   summary: 'Persist the logged-in user for offline use.',
   git: 'https://github.com/stumpss/meteor-persist-user',
   documentation: 'README.md'
