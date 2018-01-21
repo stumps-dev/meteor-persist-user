@@ -39,7 +39,7 @@ retry@1.0.9
 routepolicy@1.0.12
 service-configuration@1.0.11
 stumps:persist-collection@1.1.0
-stumps:persist-user@1.0.0
+stumps:persist-user@1.0.1
 tracker@1.1.3
 underscore@1.0.10
 webapp@1.4.0
